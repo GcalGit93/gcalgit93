@@ -21,14 +21,14 @@
 title: Giovanni's Portfolio
 email: giovannicalixte1@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-	This site contains projects I've done over the years that may or may not have seen 	the light of day. It is meant to be a demonstration of the skills I've acquired 	over the years. It will be periodically be updated with new content as I complete 	more side projects, so check back soon!
+This site contains projects I've done over the years that may or may not have seen the light of day. It is meant to be a demonstration of the skills I've acquired over the years. It will be periodically be updated with new content as I complete more side projects, so check back soon!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: N/A
 github_username:  GcalGit93
 
 # Build settings
-theme: jekyll-theme-midnight
+theme: minima
 plugins:
   - jekyll-feed
 
