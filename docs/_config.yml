@@ -27,7 +27,7 @@ twitter_username: NA
 github_username:  GcalGit93
 
 # Build settings
-theme: jekyll-theme-midnight
+theme: minima
 plugins:
   - jekyll-feed
 
