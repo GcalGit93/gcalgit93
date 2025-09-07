@@ -26,8 +26,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: NA
 github_username:  GcalGit93
 
-theme: jekflix
+#theme: jekflix
 #remote_theme: pages-themes/midnight@v0.2.0
+remote_theme: thiagorossener/jekflix-template 
 plugins:
   - jekyll-feed
   - jekyll-remote-theme # add this line to the plugins list if you already have one
