@@ -21,7 +21,7 @@
 title: Giovanni's Portfolio
 email: giovannicalixte1@gmail.com
 description: This site contains projects I've done over the years that may or may not have seen the light of day. It is meant to be a demonstration of the skills I've acquired over the years. It will be periodically be updated with new content as I complete more side projects, so check back soon! # >- this means to ignore newlines until "baseurl:"
-baseurl: https://gcalgit93.github.io/gcalgit93/docs/ # the subpath of your site, e.g. /blog
+baseurl: /gcalgit93/ # the subpath of your site, e.g. /blog
 url: https://gcalgit93.github.io # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: NA
 github_username:  GcalGit93
