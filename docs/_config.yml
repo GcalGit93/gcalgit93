@@ -37,6 +37,10 @@ menu:
     url: /
   - title: About
     url: /About
+  - title: Collegiate Work
+    url: /CollegeWork
+  - title: Projects
+    url: /Projects
 
 #Social Media Settings
 linkedin_username: giovanni-calixte
