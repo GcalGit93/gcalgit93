@@ -38,6 +38,9 @@ menu:
   - title: About
     url: /About
 
+#Social Media Settings
+linkedin_username: giovanni-calixte
+
 #site.yml
 show_hero: true
 
