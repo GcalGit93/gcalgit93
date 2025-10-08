@@ -4,6 +4,7 @@ layout: page
 
 title: About
 
+image: https://lh3.googleusercontent.com/pw/AP1GczOew5rVNokOJBWNGRKtZAE9niCAdBKhz7es2NobfqBqQq8FIbklJ9iR_CxNuzZB5UWIfyAkjQyZCjgJ77JQ-x0IjZzb20IAGidGaM5h8cjBNmi2KEhlzuEAojmi7VaVJA35iGruT0oRsYOmFf4wQnHDig=w983-h983-s-no-gm
 ---
 
 
