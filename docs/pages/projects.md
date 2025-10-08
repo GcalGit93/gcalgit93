@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Projects
-subtitle: Gallery for the work I have done on the side and is truly the essence of my portfolio
+subtitle: Gallery for the work I have done on the side and is truly the essence of my portfolio.
 permalink: /Projects
 
 ---
