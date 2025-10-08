@@ -2,11 +2,11 @@
 layout: post
 title:  First Post!
 date:   2025-09-07 01:28:30 -0400
+image: https://preview.redd.it/love-thid-advise-from-gustav-v0-e5k259ljz8gf1.jpeg?width=1152&auto=webp&s=f36d162b96ef4abb731d563f665841f5407c06d8
 categories: blog
 tags: 
 	- First Post
 	- Testing
-image: https://lh3.googleusercontent.com/pw/AP1GczPFDE2ZjDeNp82HuECSN4x_XXXJvx40PcN-NJklWWiPdrAYUdjhGRWSRU064i8VQ7PJiUauzUkQx-HkoGR49a9My03NdMCRl-vZeQB4nkswfoYoCXEPyWOgLsSSg8DyHuSb7HmzBuldgBjiRrJUFJMD9A=w862-h595-s-no?authuser=0
 ---
 
 Just a test of posting content! Exciting!
