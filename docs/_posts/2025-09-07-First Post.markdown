@@ -6,7 +6,7 @@ categories: blog
 tags: 
 	- First Post
 	- Testing
-image: http://localhost:8096/emby/Items/5/Images/Primary?maxWidth=1920&tag=3d2d1ffe13cd5b670ba8faffb3ba2e63&quality=90
+image: https://photos.app.goo.gl/1Anw5cpTj8naULBb9
 ---
 
 Just a test of posting content! Exciting!
