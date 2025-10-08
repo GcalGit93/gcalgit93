@@ -33,10 +33,10 @@ plugins:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
 
 menu:
-- title: Home
-	url: /
-- title: About
-	url: /About
+  - title: Home
+    url: /
+  - title: About
+    url: /About
 
 #site.yml
 show_hero: true
