@@ -1,38 +1,14 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
+# Site Settings
 name: Giovanni Calixte's Portfolio
 title: Giovanni's Portfolio
-email: giovannicalixte1@gmail.com
-description: # This site contains projects I've done over the years that may or may not have seen the light of day. It is meant to be a demonstration of the skills I've acquired over the years. It will be periodically be updated with new content as I complete more side projects, so check back soon! # >- this means to ignore newlines until "baseurl:"
-baseurl: /gcalgit93 # the subpath of your site, e.g. /blog /gcalgit93/
-url: https://gcalgit93.github.io # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: NA
-github_username: GcalGit93
+description: 
+tags:
+  - blog
+  - portfolio
+  - data
+  - analytics
 
-#theme: jekflix
-remote_theme: thiagorossener/jekflix-template 
-plugins:
-  - jekyll-feed
-  - jekyll-remote-theme # add this line to the plugins list if you already have one
-
+show_hero: true
 menu:
   - title: Home
     url: /
@@ -43,28 +19,100 @@ menu:
   - title: Projects
     url: /Projects
 
-#Social Media Settings
+email: giovannicalixte1@gmail.com
+# See: https://disqus.com/
+# disqus_username: disqus_username
+# Contact Form Setting
+# See: https://formspree.io/
+# formspree_form_id: formspree_form_id
+
+
+# Social Media Settings
+# Remove the item if you don't need it
+github_username: GcalGit93
+#facebook_username: facebook_username
+#twitter_username: twitter_username
+#instagram_username: instagram_username
 linkedin_username: giovanni-calixte
+#medium_username: medium_username
 
-#site.yml
-show_hero: true
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Posts Settings
+#show_time_bar: false
+#show_modal_on_exit: false
+#show_modal_on_finish_post: true
+#two_columns_layout: true
+
+
+# Advanced Settings
+baseurl: /gcalgit93 # the subpath of your site, e.g. /blog
+url: https://gcalgit93.github.io # the base hostname & protocol for your site
+# google_analytics: "UA-XXXXXXXX-X"
+language: "en"
+categories_folder: category
+#sent_message_url: "/contact/message-sent/"
+
+
+# Build settings
+#markdown: kramdown
+#highlighter: rouge
+#permalink: /:title/
+#collections:
+#  authors:
+#    output: true
+#paginate_path: "/page/:num/"
+#show_get_theme_btn: true
+#use_logo: false
+
+# Content paginator
+#paginate_content:
+#  enabled: true
+#  debug: false
+#  collections:
+#    - posts
+#  auto: false
+#  separator: "--page-break--"
+#  permalink: "/:num/"
+#  seo_canonical: true
+#  properties:
+#    part:
+#      is_generated: true
+#    last:
+#      is_generated: true
+#    single:
+#      is_generated: true
+
+# SASS
+sass:
+  style: compressed
+
+#theme: jekflix
+remote_theme: thiagorossener/jekflix-template 
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-paginate-content
+  - jekyll-feed
+  - jekyll-remote-theme # add this line to the plugins list if you already have one
+
+# Exclude my node related stuff
+exclude: [
+  'docs/',
+  'vendor/',
+  'LICENSE',
+  'CHANGELOG.md',
+  'jekflix.gemspec',
+  'package.json',
+  'package-lock.json',
+  'src',
+  'node_modules',
+  'initpost.sh',
+  'Gemfile',
+  'Gemfile.lock',
+  'gulpfile.js',
+  'README.md'
+]
+
+# Theme
+# version: v3.1.2
