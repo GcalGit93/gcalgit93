@@ -1,15 +1,57 @@
 # Site Settings
-#=include site.yml
+name: Giovanni Calixte's Portfolio
+title: Giovanni's Portfolio
+description: 
+tags:
+  - blog
+  - portfolio
+  - data
+  - analytics
+
+show_hero: true
+menu:
+  - title: Home
+    url: /
+  - title: About
+    url: /About
+  - title: Collegiate Work
+    url: /CollegeWork
+  - title: Projects
+    url: /Projects
+
+email: giovannicalixte1@gmail.com
+# See: https://disqus.com/
+# disqus_username: disqus_username
+# Contact Form Setting
+# See: https://formspree.io/
+# formspree_form_id: formspree_form_id
+
 
 # Social Media Settings
 # Remove the item if you don't need it
-#=include social.yml
+github_username: GcalGit93
+#facebook_username: facebook_username
+#twitter_username: twitter_username
+#instagram_username: instagram_username
+linkedin_username: giovanni-calixte
+#medium_username: medium_username
+
 
 # Posts Settings
-#=include posts.yml
+#show_time_bar: false
+#show_modal_on_exit: false
+#show_modal_on_finish_post: true
+#two_columns_layout: true
+
 
 # Advanced Settings
-#=include advanced.yml
+baseurl: /gcalgit93 # the subpath of your site, e.g. /blog
+url: https://gcalgit93.github.io # the base hostname & protocol for your site
+# google_analytics: "UA-XXXXXXXX-X"
+language: "en"
+categories_folder: category
+#sent_message_url: "/contact/message-sent/"
+
 
 # Build settings
 #markdown: kramdown

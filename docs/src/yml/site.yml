@@ -1,26 +1,26 @@
-name: Jekflix
-title: Jekflix | A blog theme for Jekyll
-description: Jekflix is a template for Jekyll inspired by Netflix and made by
-  Thiago Rossener.
+name: Giovanni Calixte's Portfolio
+title: Giovanni's Portfolio
+description: 
 tags:
   - blog
-  - template
-  - jekyll
-  - theme
-  - netlify
+  - portfolio
+  - data
+  - analytics
+
 show_hero: true
 menu:
   - title: Home
     url: /
   - title: About
-    url: /about
-  - title: Contact
-    url: /contact
-  - title: Feed
-    url: /feed.xml
-email: youremail@test.com
+    url: /About
+  - title: Collegiate Work
+    url: /CollegeWork
+  - title: Projects
+    url: /Projects
+
+email: giovannicalixte1@gmail.com
 # See: https://disqus.com/
-disqus_username: disqus_username
+# disqus_username: disqus_username
 # Contact Form Setting
 # See: https://formspree.io/
-formspree_form_id: formspree_form_id
+# formspree_form_id: formspree_form_id
