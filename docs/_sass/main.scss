@@ -23,3 +23,22 @@
 @import "modal";
 @import "footer";
 @import "no-js";
+
+
+// _sass/main.scss
+
+// ... (existing theme code)
+
+// Style the dashboard container
+.dashboard-container {
+  max-width: 900px; /* Set a maximum width for the dashboard */
+  margin: 0 auto;  /* This centers the container horizontally */
+  padding: 0;   /* Optional: Add some padding for spacing */
+}
+
+/* Add custom responsive breakpoints if needed */
+@media (max-width: 900px) {
+  .dashboard-container {
+    max-width: 100%; /* Go full width on smaller screens */
+  }
+}
