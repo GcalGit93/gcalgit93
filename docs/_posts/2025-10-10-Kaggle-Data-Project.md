@@ -338,7 +338,6 @@ They both don't do too well, but Prophet without any extra tuning seems to do re
 
 Using data at the day level of detail was chosen because it provided more samples in time. Aggregating to the month level created a time series that was very non-linear and consisted of less than 15 data points. As a check of the ARIMA code, we used the same code to forecast another time-series that is well known:
 
-
 <div style="max-width: 800px; margin: 0 auto;">
 	{% include KaggleEcommerceHTML/AirPassengers_Forecasts.html %}
 </div>
