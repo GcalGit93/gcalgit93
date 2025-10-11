@@ -329,7 +329,7 @@ Data Scientists from Meta have developed a forecasting model that is considered 
 Here is a plot of the forecast provided by each model:
 
 <div style="max-width: 800px; margin: 0 auto;">
-	{% include KaggleEcommerceHTML/Forecasts_ARIMA_Prophet.html %}
+{% include KaggleEcommerceHTML/Forecasts_ARIMA_Prophet.html %}
 </div>
 
 They both don't do too well, but Prophet without any extra tuning seems to do relatively better at the prediction than ARIMA. But in this case that make senses:
@@ -337,6 +337,11 @@ They both don't do too well, but Prophet without any extra tuning seems to do re
 * The data is also not continuous in time; There are discontinuities due to days where no orders were made. ARIMA seems to require data without gaps in time or is uniformly sampled, in other words. Prophet was built to work with daily data and should be robust to gaps in time, but more research is needed to see if any tuning can be applied there.
 
 Using data at the day level of detail was chosen because it provided more samples in time. Aggregating to the month level created a time series that was very non-linear and consisted of less than 15 data points. As a check of the ARIMA code, we used the same code to forecast another time-series that is well known:
+
+<div style="max-width: 800px; margin: 0 auto;">
+{% include KaggleEcommerceHTML/AirPassengers_Forecasts.html %}
+</div>
+
 
 ### Conclusion/Afterword
 
