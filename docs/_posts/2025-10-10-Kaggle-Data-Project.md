@@ -345,6 +345,12 @@ Using data at the day level of detail was chosen because it provided more sample
 
 ### Conclusion/Afterword
 
+A take away from this project are the realizations of the differences between Tableau and PowerBI as well as what good dashboard design looks like. Tableau has a much more appealing interface in my opinion and being able to publish the dashboard online and embed it anywhere should be a norm in the realm of visualization tools. However, I do like how features are more intuitive to implement in PowerBI and that it provides powerful tools for transforming data. Both do have their tiny quirks that can be frustrating and so neither tool is the perfect blend of what a "viz-ard" would want. But at the end of the day, I appreciate Tableau for letting us publish and share what we've built, license-free. 
+
+The way I built the dashboard for this project harkens back to how I designed slide presentations while I was in graduate school. But looking at what the Tableau community produces, I realized that that isn't necessarily what the industry wants out of a true dashboard. This is something I knew subconsciously, as I've worked with dashboards without realizing it all my life owning a computer. Typically, true dashboards use a lot more space and make use of "furniture" that organizes the information into buckets depending on how they relate. They aren't necessarily a slide show but they do allow for navigation to other similarly built interfaces. My dashboard is pretty cluttered for the space and doesn't use furniture to separate information. I'll give myself some grace as the design mimics what I've built for classroom exercises that did make me aware of dashboard furniture and other design elements. Future dashboards I create will keep these design concepts in mind so that I can truly create something that is considered a dashboard.
+
+Another big takeaway was the need to understand your data and the assumptions behind a predictive model when in the process of selecting a model to be trained by your data. If the data doesn't meet the requirements for the model, transformations need to be applied to the data to get it to obey those requirements. Otherwise the results of the predictions won't match expectations. The same process is applied when implementing machine learning algorithms, making the entire concept lose some of it's luster. I envision that one day it won't be just a matter of preparing the data and choosing a model. I want to be on the side of the field that creates or at least augments existing models, but that takes time and understanding more suitable for research roles and wouldn't fly in most high speed industrial settings. 
+
 This project became really rewarding early on in the process. I started towards the end of September and I want to say I've been working on it daily. It is a project that I think I will revisit in the future to refine some parts like the dashboards, do some benchmarking on performance, and add extra analysis like churn rate over time. But I think where it is right now is a good stopping point. I will definitely update this post in the future.
 
 I already have ideas for the next project. It will be smaller in scope, but quicker to put out. I soon want to dig my teeth into more traditional machine learning projects and with other kinds of datasets. But as with most things, I need to take it a step at a time.
@@ -353,5 +359,5 @@ Thanks for viewing this post!
 
 Giovanni
 
-
+_All of the files generated except the dashboards and the datasets related to the 10 million row data sets can be found in my GitHub repository located [here](https://github.com/GcalGit93/ECommerceDataAnalytics)._
 
