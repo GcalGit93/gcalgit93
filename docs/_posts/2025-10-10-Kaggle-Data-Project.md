@@ -328,7 +328,7 @@ Data Scientists from Meta have developed a forecasting model that is considered 
 
 Here is a plot of the forecast provided by each model:
 
-<div style="width: 100%; margin: 0 auto;">	
+<div style="width: 50%; margin: 0 auto;">	
 {% include KaggleEcommerceHTML/Forecasts_ARIMA_Prophet.html %}
 </div>
 
@@ -338,7 +338,7 @@ They both don't do too well, but Prophet without any extra tuning seems to do re
 
 Using data at the day level of detail was chosen because it provided more samples in time. Aggregating to the month level created a time series that was very non-linear and consisted of less than 15 data points. As a check of the ARIMA code, we used the same code to forecast another time-series that is well known:
 
-<div style="width: 100%; margin: 0 auto;">	
+<div style="width: 50%; margin: 0 auto;">	
 {% include KaggleEcommerceHTML/AirPassengers_Forecasts.html %}
 </div>
 
