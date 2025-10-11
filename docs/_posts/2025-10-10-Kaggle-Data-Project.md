@@ -10,7 +10,8 @@ category: Project
 tags:
 - Data Analytics
 - Marketing
-- Dashboards
+- Tableau
+- PowerBI
 - Forecasting 
 paginate: true
 ---
