@@ -213,7 +213,7 @@ Goal: Refine visualization skills by making the same dashboards in Tableau and P
 
 Instead of yapping about the creation process, I will share the Tableau dashboard right away (but will highlight key points afterwards):
 
-<div class="dashboard-container" markdown="1" style="width: 60%; margin: 0 auto;">
+<div class="dashboard-container" markdown="1">
   <!-- The dashboard HTML goes here -->
 <tableau-viz id="tableauViz" src="https://public.tableau.com/views/E-CommerceDashboard_17593031296730/TopCountries?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" hide-tabs toolbar="bottom"></tableau-viz>
 </div>
