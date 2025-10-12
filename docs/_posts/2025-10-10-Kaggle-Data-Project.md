@@ -25,7 +25,7 @@ The goal of this project was hone my data skills through practical application a
 * Validate scalability of the dashboard by passing a 10-20 million row dataset into the dashboard.
 * Use Python analytic tools to forecast total profit over time, learning best practices for applying predictive models to time-series data.
 
-The data set that was used for the analysis was the E-Commerce Data obtained from Kaggle. It contains data from a UK-based online retailer that does business in multiple countries, with the data on transactions occurring between 01/12/2010 and 09/12/2011, and the customers primarily being wholesalers. For this project, I will reveal the top and bottom spender by customer, country, and per capita. Customer purchasing frequency, as well as the following KPIs: churn rate, average order value, average purchase frequency, average customer lifetime, and finally customer lifetime value. I will also attempt to forecast the total profit using both linear and non-linear models.
+The dataset that was used for the analysis was the E-Commerce Data obtained from Kaggle. It contains data from a UK-based online retailer that does business in multiple countries, with the data on transactions occurring between 01/12/2010 and 09/12/2011, and the customers primarily being wholesalers. For this project, I will reveal the top and bottom spender by customer, country, and per capita. Customer purchasing frequency, as well as the following KPIs: churn rate, average order value, average purchase frequency, average customer lifetime, and finally customer lifetime value. I will also attempt to forecast the total profit using both linear and non-linear models.
 
 
 ## Normalizing and Modeling Data in PostgreSQL
@@ -299,7 +299,7 @@ Goal: Forecast total profit of the E-commerce data using time-series forecasting
 
 ARIMA stands for Auto-Regressive Integrated Moving Average and it is a gold standard tool for forecasting linear models. The auto-regressive (AR) component indicates that part of the model uses a weighted sum of previous values of the output up to a certain number of "lags" with error to predict new values. Similarly, the moving average (MA) component indicates that the mean of the signal and the weighted sum of previous residual errors from the mean up to a certain number of lags are used to predict new values of the data. Finally the integrated (I) component indicates that the time series undergoes a simple difference in order to ensure stationarity. 
 
-This model can be used in Python through the statsmodels package, and so using the Pandas library, the E-commerce data can be loaded and aggregated in python to return the sum of the order totals on each day that exists in the data set, creating the total profit time-series:
+This model can be used in Python through the statsmodels package, and so using the Pandas library, the E-commerce data can be loaded and aggregated in python to return the sum of the order totals on each day that exists in the dataset, creating the total profit time-series:
 
 <img src="https://ik.imagekit.io/ol32yu856/Post_images/TotalProfitSeries.png?updatedAt=1760124916524"> 
 
@@ -359,5 +359,5 @@ Thanks for viewing this post!
 
 Giovanni
 
-_All of the files generated except the dashboards and the datasets related to the 10 million row data sets can be found in my GitHub repository located [here](https://github.com/GcalGit93/ECommerceDataAnalytics)._
+_All of the files generated except the dashboards and the datasets related to the 10 million row datasets can be found in my GitHub repository located [here](https://github.com/GcalGit93/ECommerceDataAnalytics)._
 
