@@ -91,7 +91,7 @@ WHERE customer_id IS NOT NULL
   AND stock_code IS NOT NULL;
 ```
 
-Once these tables were set up, I saved them using the PSQL client facility in to "orders.csv", "products.csv", and "orders.csv" respectively. I went on to calculate the top spenders in SQL as well as spending frequency per customer. One key calculation that will be used moving forward is the "num_seconds" column that returns the average number of seconds between transactions as some numeric as opposed to an interval. Here is the code:
+Once these tables were set up, I saved them using the PSQL client facility in to "orders.csv", "products.csv", and "orders.csv" respectively. I went on to calculate the top spenders in SQL as well as spending frequency per customer. Here is the code:
 
 ```sql
 -- Top Customer By Spend
@@ -141,7 +141,7 @@ This sets up the environment for calculating all of the KPIs of interest for thi
 To restate the KPIs of interest, we are looking for: churn rate, average customer lifetime (ACL), average order value (AOV), average purchase frequency (APF), and finally customer lifetime value (CLV). The last three are easily calculated with the formulas readily available upon doing an online search. It becomes a bit more tricky when it comes to churn rate and ACL due to how granular you can get in calculating these values. It's good to be aware of this, but for the sake of expediency, in this project I calculate churn rate by dividing the number of customers that no longer shop at the retailer after the first 6 months by the total number of customers in that first 6 months, multiplied by 100 to convert to percentage and divided by 6 (for the 6 month period) to reveal the monthly churn rate. We use a rule of thumb to calculate ACL where it is just the reciprocal of the churn rate. The other KPIs - the main one being CLV - follows from there:
 
 ```sql
--- Once all 4 tables are created, use this script to calc churn rate, AOV, APF, ACL, and CLV.
+-- Once all tables are created, use this script to calc churn rate, AOV, APF, ACL, and CLV.
 WITH cutoff_date AS ( -- period over which churn is determined in months and the cut-off date
 	SELECT
 		FLOOR(EXTRACT(DAY FROM (MAX(invoice_date)-MIN(invoice_date)))/2/30.5) AS churn_interval,
@@ -167,40 +167,30 @@ calc_churn_rate AS ( -- calculate churn and account for several months long peri
 	FROM churned_customers
 	FULL OUTER JOIN starting_customers ON starting_customers.customer_id = churned_customers.customer_id
 	),
-customer_AOV AS ( -- Average Order Value
-	SELECT customer_id, 
-		ROUND(SUM(quantity*unit_price)/COUNT(invoice_date),2) AS AOV
+company_AOV AS ( -- Average Order Value
+	SELECT ROUND(SUM(quantity*unit_price)/COUNT(invoice_date),2) AS AOV
 	FROM orders
-	GROUP BY customer_id
-	ORDER BY AOV DESC
+	WHERE quantity > 0 
 	),
-customer_APF AS ( -- Average Purchase Frequency
-	SELECT customer_id, 
-		CASE WHEN num_seconds = 0 THEN NULL
-		ELSE ROUND(1/(num_seconds/(30.5*24*60*60)), 2) END AS APF
-	FROM spend_frequency
+company_APF AS ( -- Average Purchase Frequency
+	SELECT COUNT(invoice_no)/COUNT(DISTINCT customer_id)::numeric AS APF
+	FROM orders
+	WHERE quantity > 0
 	),
-customer_ACL AS ( -- Average Customer Lifetime
-	SELECT customer_id,
-    ROUND((1/(SELECT churn_rate/100 FROM calc_churn_rate))::numeric, 2) AS ACL
-	FROM customers
+company_ACL AS ( -- Average Customer Lifetime
+	SELECT ROUND((1/(SELECT churn_rate/100 FROM calc_churn_rate))::numeric, 2) AS ACL
+	FROM calc_churn_rate
 	)
--- KPIs. MIN() is used to allow aggregation to find time as customer to filter out short-term, high-frequency customers
-SELECT customers.customer_id,
-	FLOOR(EXTRACT(EPOCH FROM (MAX(invoice_date)-MIN(invoice_date)))/(30.5*24*60*60)) AS time_as_customer,
-	MIN(AOV) AS AOV,
-	MIN(APF) AS APF,
-	MIN(ACL) AS ACL,
-	MIN(ROUND(AOV*APF*ACL,2)) AS CLV,
+-- KPIs. 
+SELECT
+	(SELECT AOV FROM company_AOV) AS AOV,
+	(SELECT APF FROM company_APF) AS APF,
+	(SELECT ACL FROM company_ACL) AS ACL,
+	ROUND((SELECT AOV FROM company_AOV)*
+		(SELECT APF FROM company_APF)*
+		(SELECT ACL FROM company_ACL),2) AS CLV
 FROM customers
-INNER JOIN customer_AOV on customer_AOV.customer_id = customers.customer_ID
-INNER JOIN customer_APF on customer_APF.customer_id = customers.customer_ID
-INNER JOIN customer_ACL on customer_ACL.customer_id = customers.customer_ID
-INNER JOIN orders ON orders.customer_id = customers.customer_id
-WHERE customer_APF IS NOT NULL
-GROUP BY customers.customer_id
-HAVING FLOOR(EXTRACT(EPOCH FROM (MAX(invoice_date)-MIN(invoice_date)))/(30.5*24*60*60)) > 0 -- ~time_as_customer
-ORDER BY CLV DESC;
+GROUP BY 1;
 ```
 
 That is the end of the SQL portion of the project until a bit later where we use a script to simulate a 10M row dataset to validate scalability of the upcoming dashboard section.
@@ -215,7 +205,7 @@ Instead of yapping about the creation process, I will share the Tableau dashboar
 
 <div class="dashboard-container" markdown="1">
   <!-- The dashboard HTML goes here -->
-<tableau-viz id="tableauViz" src="https://public.tableau.com/views/E-CommerceDashboard_17593031296730/TopCountries?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" hide-tabs toolbar="bottom"></tableau-viz>
+<tableau-viz id="tableauViz" src="https://public.tableau.com/views/E-CommerceDashboard_17593031296730/E-commerceKPISummaryDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" hide-tabs toolbar="bottom"></tableau-viz>
 </div>
 
 Not the most prettiest of dashboards compared to what I've seen in the Tableau community, but it will get there. Some points to mention:
