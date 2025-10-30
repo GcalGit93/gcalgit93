@@ -5,7 +5,7 @@ title: "Kaggle E-Commerce Data Report"
 author: giovannicalixte
 subtitle: My initial findings from the E-commerce dataset...
 description:
-image: https://lh3.googleusercontent.com/pw/AP1GczNrDVKju69XJwoiQ46U_d7ZnsdOb5brYbbFsQz0jOwg5JPlJoXq-agqkqpuVyKo2XZBCjpZovow8DiEELZA0emhjC9hgciggb-ydxHkKefTnOwKPmMR75wb7ViRns3M4WMXWMUTdgEqQd1mmHsTuZgCtw=w455-h390-s-no-gm
+image: https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/E-commerce%20KPI%20Summary%20Dashboard.png?updatedAt=1761867822397
 category: Project
 tags:
 - Data Analytics
@@ -219,9 +219,9 @@ Not the most prettiest of dashboards compared to what I've seen in the Tableau c
 PowerBI is another popular visualization tool that is used in data analytics, and though I prefer Tableau right now, I'm seeing more and more the positives of PowerBI. Here is the KPI dashboard I made in Tableau replicated in PowerBI:
 
 
-<img src="https://ik.imagekit.io/ol32yu856/Post_images/Screenshot%202025-10-10%20015116.png?updatedAt=1760075844844">_Tooltip for the top resident is displayed in the screenshot._
+<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/PowerBIDash.png?updatedAt=1761867572939">
 
-Unfortunately, I don't have the license that would allow for me to embed an interactive version of the PowerBI dashboard, so we will have to settle for the image here. Maybe I can get away with sharing the pbix file on the repo for this project? Anyways, takeaways:
+Unfortunately, I don't have the license that would allow for me to embed an interactive version of the PowerBI dashboard, so we will have to settle for the image here. Maybe I can get away with sharing the pbix file on the repo for this project? I also couldn't find a good way of re-creating the customer order frequency raster. I will provide an update once I do. Anyways, takeaways:
 
 * As mentioned above, PowerBI's DAX is similar to Tableau's calculated fields in that it lets you compute constants and columns that can filter with dashboard interaction.
 * Having used DAX a bunch now, DAX feels more intuitive to use when it comes to accomplishing control of level of detail than the syntax in Tableau. Level of detail can be controlled through the use of the CALCULATE() function in tandem with the ALL() family of functions. ALL() directly prevents filters from effecting values in calculations.
@@ -277,7 +277,7 @@ As seen in the image, the 10M row data was able to be integrated into the PowerB
 
 Once the necessary columns and measures are derived for the 10M row datasets, the KPI dashboard seen previously can be re-created:
 
-<img src="https://ik.imagekit.io/ol32yu856/Post_images/Screenshot%202025-10-10%20033503.png?updatedAt=1760081757466"> 
+<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/PowerBIDash10M.png?updatedAt=1761867445715"> 
 
 Churn rate and average customer lifetime is preserved.
 
