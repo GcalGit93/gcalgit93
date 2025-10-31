@@ -5,7 +5,7 @@ title: "Kaggle E-Commerce Data Report"
 author: giovannicalixte
 subtitle: My initial findings from the E-commerce dataset...
 description:
-image: https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/E-commerce%20KPI%20Summary%20Dashboard.png?updatedAt=1761867822397
+image: https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/E-commerce%20KPI%20Summary%20Dashboard-%20Top%20Locations.png?updatedAt=1761871722075
 category: Project
 tags:
 - Data Analytics
@@ -27,7 +27,7 @@ The goal of this project was hone my data skills through practical application a
 
 The dataset that was used for the analysis was the E-Commerce Data obtained from Kaggle. It contains data from a UK-based online retailer that does business in multiple countries, with the data on transactions occurring between 01/12/2010 and 09/12/2011, and the customers primarily being wholesalers. For this project, I will reveal the top and bottom spender by customer, country, and per capita. Customer purchasing frequency, as well as the following KPIs: churn rate, average order value, average purchase frequency, average customer lifetime, and finally customer lifetime value. I will also attempt to forecast the total profit using both linear and non-linear models.
 
-[UPDATE](#UPDATE - 10/30/2025): This post was update with new guidance that expedites some steps.
+[UPDATE](#update---10302025): This post was update with new guidance that expedites some steps.
 
 ## Normalizing and Modeling Data in PostgreSQL
 
@@ -272,7 +272,7 @@ Once the orders10M table was completed, it was used to re-calculate the spend_fr
 
 Here is the overall data model in PowerBI, including each iteration of the data tables:
 
-<img src="https://ik.imagekit.io/ol32yu856/Post_images/EcommerceDataModel.png?updatedAt=1760028739989"> 
+<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/EcommerceDataModel.png?updatedAt=1761184226589"> 
 
 As seen in the image, the 10M row data was able to be integrated into the PowerBI data model alongside the original data without issue. Admittedly, the data model in the image also shows columns and measures calculated in DAX beforehand. These won't be present in a blank report and will need to be re-derived. 
 
@@ -292,7 +292,7 @@ ARIMA stands for Auto-Regressive Integrated Moving Average and it is a gold stan
 
 This model can be used in Python through the statsmodels package, and so using the Pandas library, the E-commerce data can be loaded and aggregated in python to return the sum of the order totals on each day that exists in the dataset, creating the total profit time-series:
 
-<img src="https://ik.imagekit.io/ol32yu856/Post_images/TotalProfitSeries.png?updatedAt=1760124916524"> 
+<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/TotalProfitSeries.png?updatedAt=1761184226675"> 
 
  A requirement in using ARIMA for forecasting is that the data that you are forecasting needs to exhibit stationarity in the mean of the signal as well as the variance. This means that:
 * The mean doesn't change with time i.e positive or negative trends are removed.
@@ -300,7 +300,7 @@ This model can be used in Python through the statsmodels package, and so using t
 
 The model uses techniques like maximum likelihood estimation to fit a probability distribution to the data that determine the "weights" on each lag in the model, so having a constant mean and variance is necessary to achieve accurate results. If the data does not exhibit these properties, differencing can be used to ensure stationarity of the mean of the time-series and transformations like a logarithmic or boxcox transformation can provide stationarity in the variance. These transformations exist within the scipy python library. For the E-commerce data we use a boxcox transformation:
 
-<img src="https://ik.imagekit.io/ol32yu856/Post_images/BoxcoxSeries.png?updatedAt=1760124916648">_Boxcox transformed data. Can't really see the effect but it is there._ 
+<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/BoxcoxSeries.png?updatedAt=1761184226595">_Boxcox transformed data. Can't really see the effect but it is there._ 
 
 
 The last thing needed by the ARIMA model are the "orders" of each component of the model. The quantity provided for the orders of the AR and MA component determines the number of previous lags included in the sums for both components, while the quantity for the order of the I component determines how many times the time-series is differenced. For linear signals, this order is usually set to 1. But to determine the AR and MA orders, a partial auto-correlation function (PACF) and auto-correlation function (ACF) needs to be solve, respectively. For the E-Commerce data this looks like:
@@ -335,6 +335,12 @@ Using data at the day level of detail was chosen because it provided more sample
 
 
 ### Conclusion/Afterword
+
+**Initial insights:**
++ Though local customers make up a majority of the retailer's business, they are not the highest spenders on a per customer basis. 
++ Locals may benefit from local discounts; Internationals may pay additional fees for products, or behave in ways that increase amount spent. 
++ Further analysis can look into regional preference of products, their performance over time, and predictions of future trends in purchasing.
++ A month-to-month churn rate should be calculated as well. Also, a cohort analysis can be used to determine locations/areas of growth. 
 
 A take away from this project are the realizations of the differences between Tableau and PowerBI as well as what good dashboard design looks like. Tableau has a much more appealing interface in my opinion and being able to publish the dashboard online and embed it anywhere should be a norm in the realm of visualization tools. However, I do like how features are more intuitive to implement in PowerBI and that it provides powerful tools for transforming data. Both do have their tiny quirks that can be frustrating and so neither tool is the perfect blend of what a "viz-ard" would want. But at the end of the day, I appreciate Tableau for letting us publish and share what we've built, license-free. 
 
