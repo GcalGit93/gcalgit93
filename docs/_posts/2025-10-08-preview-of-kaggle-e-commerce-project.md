@@ -4,7 +4,7 @@ layout: post
 title: "Preview of Kaggle E-commerce Project"
 subtitle: Wrestling with some marketing data from a UK-based retailer...
 description:
-image: https://ik.imagekit.io/ol32yu856/Post_images/DataModelResized_cnGRU-jaW?updatedAt=1760030073852
+image: https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/DataModelResized_cnGRU-jaW?updatedAt=1761184226607
 category: preview
 tags: 
 author:
