@@ -34,7 +34,7 @@ The dataset that was used for the analysis was the E-Commerce Data obtained from
 **Initial Insights:**
 + _Though local customers make up a majority of the retailer's business, they are not the highest spenders on a per customer basis._
 + _Locals may benefit from local discounts; Internationals may pay additional fees for products, or behave in ways that increase amount spent (only purchasing more expensive, niche items)._
-+ _Forecasting will require a more bespoke model, or more data tame the data._
++ _Forecasting will require a more bespoke model, or more data to capture any trends._
 + _Further analysis can look into regional preference of products, their performance over time, and predictions of future trends in purchasing._
 + _A month-to-month churn rate should be calculated as well. Also, a cohort analysis can be used to determine locations/areas of growth._ 
 
@@ -205,7 +205,7 @@ GROUP BY 1;
 
 That is the end of the SQL portion of the project until a bit later where we use a script to simulate a 10M row dataset to validate scalability of the upcoming dashboard section. The overall analysis diagram is seen here:
 
-<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/EcommerceDiag.png?updatedAt=1761900938019">
+<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/EcommerceDiag.png?updatedAt=1761900938019">_Analysis Diagram_
 
 ## Visualizing E-commerce Data in Tableau and PowerBI
 
