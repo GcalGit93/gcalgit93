@@ -17,9 +17,10 @@ paginate: true
 ---
  
 
-[UPDATE](#update---10302025): _**This post was updated with new guidance that expedites some steps.**_
 
 # Project Overview
+
+[UPDATE](#update---10302025): _**This post was updated with new guidance that expedites some steps.**_
 
 The goal of this project was hone my data skills through practical application as opposed to relying on online tutorials. It also introduces me to concepts and knowledge I would need for data analytics jobs that required knowledge in marketing and forecasting. I think this is a post that I can revisit in the future as their are several parts I would like to refine. But as it is now I think it is worth sharing. The project is broken down as follows:
 
