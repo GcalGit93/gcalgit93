@@ -15,8 +15,9 @@ tags:
 - Forecasting 
 paginate: true
 ---
+ 
 
-[UPDATE](#update---10302025): **This post was update with new guidance that expedites some steps.**
+[UPDATE](#update---10302025): _**This post was updated with new guidance that expedites some steps.**_
 
 # Project Overview
 
