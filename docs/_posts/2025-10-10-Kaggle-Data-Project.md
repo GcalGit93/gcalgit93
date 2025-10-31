@@ -31,12 +31,12 @@ The goal of this project was hone my data skills through practical application a
 
 The dataset that was used for the analysis was the E-Commerce Data obtained from Kaggle. It contains data from a UK-based online retailer that does business in multiple countries, with the data on transactions occurring between 01/12/2010 and 09/12/2011, and the customers primarily being wholesalers. For this project, I will reveal the top and bottom spender by customer, country, and per capita. Customer purchasing frequency, as well as the following KPIs: churn rate, average order value, average purchase frequency, average customer lifetime, and finally customer lifetime value. I will also attempt to forecast the total profit using both linear and non-linear models.
 
-**Initial insights:**
-+ Though local customers make up a majority of the retailer's business, they are not the highest spenders on a per customer basis. 
-+ Locals may benefit from local discounts; Internationals may pay additional fees for products, or behave in ways that increase amount spent (only purchasing more expensive, niche items).
-+ Forecasting will require a more bespoke model, or more data tame the data. 
-+ Further analysis can look into regional preference of products, their performance over time, and predictions of future trends in purchasing.
-+ A month-to-month churn rate should be calculated as well. Also, a cohort analysis can be used to determine locations/areas of growth. 
+**Initial Insights:**
++ _Though local customers make up a majority of the retailer's business, they are not the highest spenders on a per customer basis._
++ _Locals may benefit from local discounts; Internationals may pay additional fees for products, or behave in ways that increase amount spent (only purchasing more expensive, niche items)._
++ _Forecasting will require a more bespoke model, or more data tame the data._
++ _Further analysis can look into regional preference of products, their performance over time, and predictions of future trends in purchasing._
++ _A month-to-month churn rate should be calculated as well. Also, a cohort analysis can be used to determine locations/areas of growth._ 
 
 ## Normalizing and Modeling Data in PostgreSQL
 
