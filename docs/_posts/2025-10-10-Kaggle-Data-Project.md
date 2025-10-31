@@ -16,6 +16,8 @@ tags:
 paginate: true
 ---
 
+[UPDATE](#update---10302025): **This post was update with new guidance that expedites some steps.**
+
 # Project Overview
 
 The goal of this project was hone my data skills through practical application as opposed to relying on online tutorials. It also introduces me to concepts and knowledge I would need for data analytics jobs that required knowledge in marketing and forecasting. I think this is a post that I can revisit in the future as their are several parts I would like to refine. But as it is now I think it is worth sharing. The project is broken down as follows:
@@ -26,8 +28,6 @@ The goal of this project was hone my data skills through practical application a
 * Use Python analytic tools to forecast total profit over time, learning best practices for applying predictive models to time-series data.
 
 The dataset that was used for the analysis was the E-Commerce Data obtained from Kaggle. It contains data from a UK-based online retailer that does business in multiple countries, with the data on transactions occurring between 01/12/2010 and 09/12/2011, and the customers primarily being wholesalers. For this project, I will reveal the top and bottom spender by customer, country, and per capita. Customer purchasing frequency, as well as the following KPIs: churn rate, average order value, average purchase frequency, average customer lifetime, and finally customer lifetime value. I will also attempt to forecast the total profit using both linear and non-linear models.
-
-[UPDATE](#update---10302025): This post was update with new guidance that expedites some steps.
 
 ## Normalizing and Modeling Data in PostgreSQL
 
