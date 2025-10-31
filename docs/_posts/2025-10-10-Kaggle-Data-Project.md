@@ -27,6 +27,7 @@ The goal of this project was hone my data skills through practical application a
 
 The dataset that was used for the analysis was the E-Commerce Data obtained from Kaggle. It contains data from a UK-based online retailer that does business in multiple countries, with the data on transactions occurring between 01/12/2010 and 09/12/2011, and the customers primarily being wholesalers. For this project, I will reveal the top and bottom spender by customer, country, and per capita. Customer purchasing frequency, as well as the following KPIs: churn rate, average order value, average purchase frequency, average customer lifetime, and finally customer lifetime value. I will also attempt to forecast the total profit using both linear and non-linear models.
 
+[UPDATE](#UPDATE - 10/30/2025): This post was update with new guidance that expedites some steps.
 
 ## Normalizing and Modeling Data in PostgreSQL
 
@@ -277,7 +278,7 @@ As seen in the image, the 10M row data was able to be integrated into the PowerB
 
 Once the necessary columns and measures are derived for the 10M row datasets, the KPI dashboard seen previously can be re-created:
 
-<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/PowerBIDash10M.png?updatedAt=1761867445715"> 
+<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/PowerBIDash10M.png?updatedAt=1761867445715">_NOTE: Churn and ACL remain the same due to their relationship and how the data was scaled. Only AOV, APF, and CLV changed._
 
 Churn rate and average customer lifetime is preserved.
 
@@ -346,6 +347,13 @@ This project became really rewarding early on in the process. I started towards 
 I already have ideas for the next project. It will be smaller in scope, but quicker to put out. I soon want to dig my teeth into more traditional machine learning projects and with other kinds of datasets. But as with most things, I need to take it a step at a time.
 
 Thanks for viewing this post!
+
+## UPDATE - 10/30/2025 
+
+After looking at other analysis of this data set, I realized some of the quantities needed to be recalculated, code required some updating, and my dashboards needed a redesign. Here are the changes:
++ Previous AOV, APF, and consequently CLV were calculated on a per customer basis. They all should be an aggregate value taking all customers into account. This creates a single metric that you can score a company's performance against. The SQL code and formulas in the Dashboards have been updated to reflect this.
++ Because of the above, it turns out the SpendFrequency*.csv files are no longer needed for any calculation and so they can be removed from the data model and the SQL code can be ignored.
++ The main visual of this post is no longer relevant, and so I took the time to redesign the entire dashboard to fill the gap. I learned new techniques in doing so and utilized the concept of furniture in it's design. It looks better than what I had before and reflects what I've seen in the Tableau community. I think I can be more minimal though and would like to add more variety to the visuals. 
 
 Giovanni
 
