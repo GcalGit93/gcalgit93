@@ -355,6 +355,8 @@ I already have ideas for the next project. It will be smaller in scope, but quic
 
 Thanks for viewing this post!
 
+Giovanni
+
 ## UPDATE - 10/30/2025 
 
 After looking at other analysis of this data set, I realized some of the quantities needed to be recalculated, code required some updating, and my dashboards needed a redesign. Here are the changes:
@@ -362,7 +364,6 @@ After looking at other analysis of this data set, I realized some of the quantit
 + Because of the above, it turns out the SpendFrequency*.csv files are no longer needed for any calculation and so they can be removed from the data model and the SQL code can be ignored.
 + The main visual of this post is no longer relevant, and so I took the time to redesign the entire dashboard to fill the gap. I learned new techniques in doing so and utilized the concept of furniture in it's design. It looks better than what I had before and reflects what I've seen in the Tableau community. I think I can be more minimal though and would like to add more variety to the visuals. 
 
-Giovanni
 
 _All of the files generated except the dashboards and the datasets related to the 10 million row datasets can be found in my GitHub repository located [here](https://github.com/GcalGit93/ECommerceDataAnalytics)._
 
