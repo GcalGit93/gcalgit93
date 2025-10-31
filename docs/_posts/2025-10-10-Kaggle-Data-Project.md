@@ -31,6 +31,13 @@ The goal of this project was hone my data skills through practical application a
 
 The dataset that was used for the analysis was the E-Commerce Data obtained from Kaggle. It contains data from a UK-based online retailer that does business in multiple countries, with the data on transactions occurring between 01/12/2010 and 09/12/2011, and the customers primarily being wholesalers. For this project, I will reveal the top and bottom spender by customer, country, and per capita. Customer purchasing frequency, as well as the following KPIs: churn rate, average order value, average purchase frequency, average customer lifetime, and finally customer lifetime value. I will also attempt to forecast the total profit using both linear and non-linear models.
 
+**Initial insights:**
++ Though local customers make up a majority of the retailer's business, they are not the highest spenders on a per customer basis. 
++ Locals may benefit from local discounts; Internationals may pay additional fees for products, or behave in ways that increase amount spent (only purchasing more expensive, niche items).
++ Forecasting will require a more bespoke model, or more data tame the data. 
++ Further analysis can look into regional preference of products, their performance over time, and predictions of future trends in purchasing.
++ A month-to-month churn rate should be calculated as well. Also, a cohort analysis can be used to determine locations/areas of growth. 
+
 ## Normalizing and Modeling Data in PostgreSQL
 
 Goal: Break original dataset into several data tables to normalize and practice data integrity. The following set of code creates new tables in PostgreSQL, setting the Primary Keys and Foreign Keys, and inserts the data from a staging table that holds all of the data:
@@ -196,7 +203,9 @@ FROM customers
 GROUP BY 1;
 ```
 
-That is the end of the SQL portion of the project until a bit later where we use a script to simulate a 10M row dataset to validate scalability of the upcoming dashboard section.
+That is the end of the SQL portion of the project until a bit later where we use a script to simulate a 10M row dataset to validate scalability of the upcoming dashboard section. The overall analysis diagram is seen here:
+
+<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/EcommerceDiag.png?updatedAt=1761900938019">
 
 ## Visualizing E-commerce Data in Tableau and PowerBI
 
@@ -338,11 +347,7 @@ Using data at the day level of detail was chosen because it provided more sample
 
 ### Conclusion/Afterword
 
-**Initial insights:**
-+ Though local customers make up a majority of the retailer's business, they are not the highest spenders on a per customer basis. 
-+ Locals may benefit from local discounts; Internationals may pay additional fees for products, or behave in ways that increase amount spent. 
-+ Further analysis can look into regional preference of products, their performance over time, and predictions of future trends in purchasing.
-+ A month-to-month churn rate should be calculated as well. Also, a cohort analysis can be used to determine locations/areas of growth. 
+
 
 A take away from this project are the realizations of the differences between Tableau and PowerBI as well as what good dashboard design looks like. Tableau has a much more appealing interface in my opinion and being able to publish the dashboard online and embed it anywhere should be a norm in the realm of visualization tools. However, I do like how features are more intuitive to implement in PowerBI and that it provides powerful tools for transforming data. Both do have their tiny quirks that can be frustrating and so neither tool is the perfect blend of what a "viz-ard" would want. But at the end of the day, I appreciate Tableau for letting us publish and share what we've built, license-free. 
 
