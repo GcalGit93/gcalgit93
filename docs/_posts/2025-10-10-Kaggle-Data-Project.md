@@ -205,7 +205,7 @@ GROUP BY 1;
 
 That is the end of the SQL portion of the project until a bit later where we use a script to simulate a 10M row dataset to validate scalability of the upcoming dashboard section. The overall analysis diagram is seen here:
 
-<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/EcommerceDiag.png?updatedAt=1761902203901" width="1200" />_Analysis Diagram_
+<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/EcommerceDiag.png?updatedAt=1761902203901" width="1200">_Analysis Diagram_
 
 ## Visualizing E-commerce Data in Tableau and PowerBI
 
