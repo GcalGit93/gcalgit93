@@ -18,7 +18,7 @@ paginate: true
  
 
 
-# Project Overview and Initial Executive Insights
+# Project Overview and Initial Executive Insights (Summary)
 
 [UPDATE](#update---10302025): _**This post was updated with new guidance that expedites some steps.**_
 
