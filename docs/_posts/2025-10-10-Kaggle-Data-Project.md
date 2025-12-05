@@ -16,7 +16,7 @@ tags:
 paginate: true
 ---
  
-
+_All of the files generated except the dashboards and the datasets related to the 10 million row datasets can be found in my GitHub repository located [here](https://github.com/GcalGit93/ECommerceDataAnalytics)._
 
 # Project Overview and Initial Executive Insights (Summary)
 
@@ -371,5 +371,5 @@ After looking at other analysis of this data set, I realized some of the quantit
 + The main visual of this post is no longer relevant, and so I took the time to redesign the entire dashboard to fill the gap. I learned new techniques in doing so and utilized the concept of furniture in it's design. It looks better than what I had before and reflects what I've seen in the Tableau community. I think I can be more minimal though and would like to add more variety to the visuals. 
 
 
-_All of the files generated except the dashboards and the datasets related to the 10 million row datasets can be found in my GitHub repository located [here](https://github.com/GcalGit93/ECommerceDataAnalytics)._
+
 
