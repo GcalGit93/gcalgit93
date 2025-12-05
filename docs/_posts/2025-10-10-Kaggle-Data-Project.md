@@ -22,6 +22,11 @@ paginate: true
 
 [UPDATE](#update---10302025): _**This post was updated with new guidance that expedites some steps.**_
 
+<div class="dashboard-container" markdown="1">
+  <!-- The dashboard HTML goes here -->
+<tableau-viz id="tableauViz" src="https://public.tableau.com/views/E-CommerceDashboard_17593031296730/E-commerceKPISummaryDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" hide-tabs toolbar="bottom"></tableau-viz>
+</div>
+
 The goal of this project was hone my data skills through practical application as opposed to relying on online tutorials. It also introduces me to concepts and knowledge I would need for data analytics jobs that required knowledge in marketing and forecasting. I think this is a post that I can revisit in the future as their are several parts I would like to refine. But as it is now I think it is worth sharing. The project is broken down as follows:
 
 * Use PostgreSQL tools to normalize and model data as well as calculate key performance indicators (KPI's) relevant to retailers to aid Marketing.
@@ -213,12 +218,7 @@ Goal: Refine visualization skills by making the same dashboards in Tableau and P
 
 ### Tableau dashboard (Most profitable locations, Customer behavior, KPIs - Gains, Losses, and Lifetime Value)
 
-Instead of yapping about the creation process, I will share the Tableau dashboard right away (but will highlight key points afterwards):
 
-<div class="dashboard-container" markdown="1">
-  <!-- The dashboard HTML goes here -->
-<tableau-viz id="tableauViz" src="https://public.tableau.com/views/E-CommerceDashboard_17593031296730/E-commerceKPISummaryDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" hide-tabs toolbar="bottom"></tableau-viz>
-</div>
 
 Not the most prettiest of dashboards compared to what I've seen in the Tableau community, but it will get there. Some points to mention:
 * The Tableau UI is much more appealing to look at in my opinion. Though it isn't always easy to figure out where things are located, it feels nice to navigate and create visualizations. It is kind of like Tableau is I-Phone and PowerBI is Android. 
