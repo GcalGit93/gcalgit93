@@ -219,7 +219,7 @@ Goal: Refine visualization skills by making the same dashboards in Tableau and P
 
 ### Tableau dashboard (Most profitable locations, Customer behavior, KPIs - Gains, Losses, and Lifetime Value)
 
-<li><a href="#EcomDash">Link to Tableau Dashboard</a></li>
+Here is a link to the tableau dashboard above (note the interactivity): <li><a href="#EcomDash">Link to Tableau Dashboard</a></li>
 
 Not the most prettiest of dashboards compared to what I've seen in the Tableau community, but it will get there. Some points to mention:
 * The Tableau UI is much more appealing to look at in my opinion. Though it isn't always easy to figure out where things are located, it feels nice to navigate and create visualizations. It is kind of like Tableau is I-Phone and PowerBI is Android. 
