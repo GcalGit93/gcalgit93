@@ -22,7 +22,7 @@ _All of the files generated except the dashboards and the datasets related to th
 
 [UPDATE](#update---10302025): _**This post was updated with new guidance that expedites some steps.**_
 
-<h2 id="EcomDash"> E-commerce Dashboard </h2>
+<h2 id="EcomDash"></h2>
 <div class="dashboard-container" markdown="1">
   <!-- The dashboard HTML goes here -->
 <tableau-viz id="tableauViz" src="https://public.tableau.com/views/E-CommerceDashboard_17593031296730/E-commerceKPISummaryDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" hide-tabs toolbar="bottom"></tableau-viz>
@@ -219,7 +219,7 @@ Goal: Refine visualization skills by making the same dashboards in Tableau and P
 
 ### Tableau dashboard (Most profitable locations, Customer behavior, KPIs - Gains, Losses, and Lifetime Value)
 
-<li><a href="#EcomDash">Link to Tableau Dashboard</a><li>
+<li><a href="#EcomDash">Link to Tableau Dashboard</a></li>
 
 Not the most prettiest of dashboards compared to what I've seen in the Tableau community, but it will get there. Some points to mention:
 * The Tableau UI is much more appealing to look at in my opinion. Though it isn't always easy to figure out where things are located, it feels nice to navigate and create visualizations. It is kind of like Tableau is I-Phone and PowerBI is Android. 
