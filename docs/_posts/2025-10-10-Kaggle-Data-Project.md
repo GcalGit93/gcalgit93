@@ -317,7 +317,7 @@ The model uses techniques like maximum likelihood estimation to fit a probabilit
 
 The last thing needed by the ARIMA model are the "orders" of each component of the model. The quantity provided for the orders of the AR and MA component determines the number of previous lags included in the sums for both components, while the quantity for the order of the I component determines how many times the time-series is differenced. For linear signals, this order is usually set to 1. But to determine the AR and MA orders, a partial auto-correlation function (PACF) and auto-correlation function (ACF) needs to be solve, respectively. For the E-Commerce data this looks like:
 
-<img src="https://ik.imagekit.io/ol32yu856/Post_images/ACF_PACF.png?updatedAt=1760124916733">_ACF settles after 25 lags, PACF settles after 5 lags_
+<img src="https://ik.imagekit.io/ol32yu856/25_10_10_Kaggle_Ecommercie_Data_Post_images/ACF_PACF.png?updatedAt=1761184226572">_ACF settles after 25 lags, PACF settles after 5 lags_
 
 Orders are typically selected where each function no longer shows significance past the zero crossing or in this case the confidence band in blue. A more objective estimation of the orders can be accomplished by iterating through different selections of parameters and comparing the model score against Akaike's Information Criterion or Bayesian Information Criterion. The auto.arima function in the pmdarima package is able to do this for you. 
 
