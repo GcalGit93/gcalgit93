@@ -16,7 +16,7 @@ tags:
 paginate: true
 ---
  
-_All of the files generated except the dashboards and the datasets related to the 10 million row datasets can be found in my GitHub repository located [here](https://github.com/GcalGit93/ECommerceDataAnalytics)._
+_All of the files generated except for the dashboards and the datasets related to the 10 million row datasets can be found in my GitHub repository located [here](https://github.com/GcalGit93/ECommerceDataAnalytics)._
 
 # Project Overview and Initial Executive Insights (Summary)
 

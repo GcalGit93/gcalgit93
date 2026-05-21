@@ -16,7 +16,7 @@ tags:
 paginate: true
 ---
 
-_All of the files generated except the dashboards can be found in my GitHub repository located [here]()._
+_All of the files generated except for the dashboards can be found in my GitHub repository located [here]()._
 
 
 # Project Overview and Executive Insights (Summary)
